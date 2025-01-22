@@ -475,8 +475,10 @@ components:
       properties:
         load_source:
           type: number
+          format: double
         load_source_count:
           type: number
+          format: double
         load_stored_fields:
           type: integer
           format: int32
@@ -713,6 +715,7 @@ components:
         max_concurrent_group_searches:
           description: The number of concurrent requests that are allowed to be retrieved by the `inner_hits` parameter per group.
           type: integer
+          format: int32
       required:
         - field
     Highlight:

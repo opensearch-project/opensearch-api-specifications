@@ -57,10 +57,13 @@ components:
       properties:
         generation:
           type: integer
+          format: int32
         num_docs:
           type: integer
+          format: int32
         deleted_docs:
           type: integer
+          format: int32
         size:
           $ref: '_common.yaml#/components/schemas/HumanReadableByteCount'
         size_in_bytes:

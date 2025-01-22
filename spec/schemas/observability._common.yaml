@@ -11,8 +11,10 @@ components:
       properties:
         startIndex:
           type: integer
+          format: int32
         totalHits:
           type: integer
+          format: int32
         totalHitRelation:
           type: string
         observabilityObjectList:
@@ -32,8 +34,10 @@ components:
           type: string
         lastUpdatedTimeMs:
           type: integer
+          format: int32
         createdTimeMs:
           type: integer
+          format: int32
         tenant:
           type: string
         operationalPanel:
@@ -76,12 +80,16 @@ components:
           type: string
         x:
           type: integer
+          format: int32
         y:
           type: integer
+          format: int32
         w:
           type: integer
+          format: int32
         h:
           type: integer
+          format: int32
       required:
         - h
         - id
@@ -217,6 +225,7 @@ components:
           $ref: '#/components/schemas/ErrorResponse'
         status:
           type: integer
+          format: int32
           # example: 404
       required:
         - error

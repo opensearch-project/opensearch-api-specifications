@@ -363,14 +363,17 @@ components:
           $ref: '_common.yaml#/components/schemas/ByteCount'
         coordinating_rejections:
           type: number
+          format: double
         primary_in_bytes:
           $ref: '_common.yaml#/components/schemas/ByteCount'
         primary_rejections:
           type: number
+          format: double
         replica_in_bytes:
           $ref: '_common.yaml#/components/schemas/ByteCount'
         replica_rejections:
           type: number
+          format: double
       required:
         - all_in_bytes
         - combined_coordinating_and_primary_in_bytes

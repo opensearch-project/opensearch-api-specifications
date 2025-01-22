@@ -236,6 +236,7 @@ components:
       description: 'The starting index (default: 0)'
       schema:
         type: integer
+        format: int32
 
     sm.update_policy::path.policy_name:
       name: policy_name
@@ -252,6 +253,7 @@ components:
       required: true
       schema:
         type: integer
+        format: int32
 
     sm.update_policy::query.if_primary_term:
       name: if_primary_term
@@ -260,6 +262,7 @@ components:
       required: true
       schema:
         type: integer
+        format: int32
 
     sm.delete_policy::path.policy_name:
       name: policy_name
@@ -300,6 +303,7 @@ components:
         The number of policies to return.
       schema:
         type: integer
+        format: int32
 
     sm.get_policies::query.queryString:
       name: queryString

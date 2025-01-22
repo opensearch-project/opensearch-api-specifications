@@ -332,6 +332,7 @@ components:
         - total
     uint:
       type: integer
+      format: int32
     ShardFailure:
       type: object
       properties:
@@ -343,6 +344,7 @@ components:
           $ref: '#/components/schemas/ErrorCause'
         shard:
           type: integer
+          format: int32
         status:
           type: string
       required:
@@ -747,6 +749,7 @@ components:
           type: string
     GeoTilePrecision:
       type: number
+      format: double
     EmptyObject:
       type: object
     SlicedScroll:
@@ -777,6 +780,7 @@ components:
       oneOf:
         - title: count
           type: integer
+          format: int32
         - title: option
           $ref: '#/components/schemas/WaitForActiveShardOptions'
     WaitForActiveShardOptions:
@@ -959,6 +963,7 @@ components:
         strings to the target type.
       oneOf:
         - type: integer
+          format: int32
         - type: string
     StringifiedLong:
       oneOf:
@@ -1034,10 +1039,13 @@ components:
         - ttf
     byte:
       type: number
+      format: double
     short:
       type: number
+      format: double
     ulong:
       type: number
+      format: double
     Level:
       type: string
       enum:
@@ -1521,12 +1529,15 @@ components:
         total:
           description: The total number of nodes selected by the request. 
           type: integer
+          format: int32
         successful:
           description: The number of nodes that responded successfully to the request. 
           type: integer
+          format: int32
         failed:
           description: The number of nodes that rejected the request or failed to respond. If this value is not 0, then a reason for the rejection or failure is included in the response. 
           type: integer
+          format: int32
       required:
         - failed
         - successful
@@ -1602,11 +1613,13 @@ components:
       oneOf:
         - type: string
         - type: number
+          format: double
     TaskFailure:
       type: object
       properties:
         task_id:
           type: integer
+          format: int32
         node_id:
           $ref: '#/components/schemas/NodeId'
         status:
@@ -1631,6 +1644,7 @@ components:
           $ref: '#/components/schemas/SequenceNumber'
         _primary_term:
           type: number
+          format: double
         _routing:
           $ref: '#/components/schemas/Routing'
         _source:
@@ -1646,6 +1660,7 @@ components:
           $ref: '#/components/schemas/ErrorCause'
         status:
           type: number
+          format: double
       required:
         - error
         - status
@@ -2210,9 +2225,11 @@ components:
             rank_constant:
               description: To what degree documents found in individual result sets per query influence the final ranked result set.
               type: number
+              format: double
             window_size:
               description: The size of the individual result sets per query.
               type: number
+              format: double
     RankBase:
       type: object
     NodeShard:
@@ -2470,8 +2487,10 @@ components:
       properties:
         thread_executions:
           type: number
+          format: double
         active_threads:
           type: number
+          format: double
       required:
         - active_threads
         - thread_executions

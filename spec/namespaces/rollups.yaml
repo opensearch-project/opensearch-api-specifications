@@ -184,4 +184,5 @@ components:
       description: Only perform the operation if the document has this primary term.
       schema:
         type: number
+        format: double
       style: form

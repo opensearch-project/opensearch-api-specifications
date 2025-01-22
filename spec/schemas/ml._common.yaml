@@ -15,6 +15,7 @@ components:
       properties:
         took:
           type: integer
+          format: int32
           description: The time taken to execute the search.
         timed_out:
           type: boolean
@@ -62,6 +63,7 @@ components:
           $ref: '_common.yaml#/components/schemas/SequenceNumber'
         _primary_term:
           type: integer
+          format: int32
           description: The primary term.
         _index:
           $ref: '_common.yaml#/components/schemas/IndexName'
@@ -133,6 +135,7 @@ components:
           description: The model content hash value.
         planning_worker_node_count:
           type: number
+          format: double
           description: The planning worker node count.
         model_config:
           $ref: '#/components/schemas/ModelConfig'
@@ -164,6 +167,7 @@ components:
           description: The connector ID.
         current_worker_node_count:
           type: number
+          format: double
           description: The current worker node count.
         model_group_id:
           type: string
@@ -198,6 +202,7 @@ components:
             - restricted
         latest_version:
           type: integer
+          format: int32
           description: The latest version.
         protocol:
           type: string
@@ -441,6 +446,7 @@ components:
             - STRING
         value:
           type: number
+          format: double
           description: The value.
     InputQuery:
       type: object
@@ -527,15 +533,19 @@ components:
       properties:
         gte:
           type: number
+          format: double
           description: Greater than or equal to.
         lte:
           type: number
+          format: double
           description: Less than or equal to.
         gt:
           type: number
+          format: double
           description: Greater than.
         lt:
           type: number
+          format: double
           description: Less than.
     Term:
       type: object
@@ -594,6 +604,7 @@ components:
           $ref: '_common.yaml#/components/schemas/FieldValue'
         boost:
           type: number
+          format: double
           description: Adjust the relevance score of a match.
     Type:
       type: object
@@ -628,6 +639,7 @@ components:
             - sum
         boost:
           type: number
+          format: double
           description: Adjust the relevance score of a match.
     Exists:
       type: object
@@ -827,6 +839,7 @@ components:
           description: The model group name.
         latest_version:
           type: integer
+          format: int32
           description: The latest version.
         description:
           type: string
@@ -1144,18 +1157,24 @@ components:
       properties:
         max_connection:
           type: integer
+          format: int32
         connection_timeout:
           type: integer
+          format: int32
         read_timeout:
           type: integer
+          format: int32
         retry_backoff_policy:
           type: string
         max_retry_times:
           type: integer
+          format: int32
         retry_backoff_millis:
           type: integer
+          format: int32
         retry_timeout_seconds:
           type: integer
+          format: int32
     Action:
       type: object
       properties:

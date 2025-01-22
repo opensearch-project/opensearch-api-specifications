@@ -47,71 +47,95 @@ components:
       properties:
         max_distance_query_with_filter_requests:
           type: number
+          format: double
         graph_memory_usage_percentage:
           $ref: '_common.yaml#/components/schemas/PercentageNumber'
         graph_query_requests:
           type: number
+          format: double
         graph_memory_usage:
           type: number
+          format: double
         cache_capacity_reached:
           type: boolean
         load_success_count:
           type: number
+          format: double
         training_memory_usage:
           type: number
+          format: double
         indices_in_cache:
           type: object
           additionalProperties: true
         script_query_errors:
           type: number
+          format: double
         hit_count:
           type: number
+          format: double
         knn_query_requests:
           type: number
+          format: double
         total_load_time:
           type: number
+          format: double
         miss_count:
           type: number
+          format: double
         min_score_query_requests:
           type: number
+          format: double
         knn_query_with_filter_requests:
           type: number
+          format: double
         training_memory_usage_percentage:
           $ref: '_common.yaml#/components/schemas/PercentageNumber'
         max_distance_query_requests:
           type: number
+          format: double
         lucene_initialized:
           type: boolean
         graph_index_requests:
           type: number
+          format: double
         faiss_initialized:
           type: boolean
         load_exception_count:
           type: number
+          format: double
         training_errors:
           type: number
+          format: double
         min_score_query_with_filter_requests:
           type: number
+          format: double
         eviction_count:
           type: number
+          format: double
         nmslib_initialized:
           type: boolean
         script_compilations:
           type: number
+          format: double
         script_query_requests:
           type: number
+          format: double
         graph_stats:
           $ref: '#/components/schemas/GraphStats'
         graph_query_errors:
           type: number
+          format: double
         indexing_from_model_degraded:
           type: boolean
         graph_index_errors:
           type: number
+          format: double
         training_requests:
           type: number
+          format: double
         script_compilation_errors:
           type: number
+          format: double
     GraphStats:
       type: object
       properties:
@@ -124,6 +148,7 @@ components:
       properties:
         total:
           type: number
+          format: double
         total_time_in_millis:
           $ref: '_common.yaml#/components/schemas/DurationValueUnitMillis'
     GraphMergeStats:
@@ -131,14 +156,18 @@ components:
       properties:
         current:
           type: number
+          format: double
         total:
           type: number
+          format: double
         total_time_in_millis:
           $ref: '_common.yaml#/components/schemas/DurationValueUnitMillis'
         current_docs:
           type: number
+          format: double
         total_docs:
           type: number
+          format: double
         total_size_in_bytes:
           $ref: '_common.yaml#/components/schemas/ByteCount'
         current_size_in_bytes:

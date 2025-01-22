@@ -37,6 +37,7 @@ components:
       in: path
       schema:
         type: number
+        format: double
   responses:
     adopt@200:
       application/json:

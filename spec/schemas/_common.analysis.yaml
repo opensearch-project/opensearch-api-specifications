@@ -45,8 +45,10 @@ components:
             type: string
         position_increment_gap:
           type: integer
+          format: int32
         position_offset_gap:
           type: integer
+          format: int32
         tokenizer:
           type: string
       required:
@@ -63,6 +65,7 @@ components:
           $ref: '_common.yaml#/components/schemas/VersionString'
         max_output_size:
           type: integer
+          format: int32
         preserve_original:
           type: boolean
         separator:
@@ -218,6 +221,7 @@ components:
             - standard
         max_token_length:
           type: integer
+          format: int32
         stopwords:
           $ref: '#/components/schemas/StopWords'
       required:
@@ -625,8 +629,10 @@ components:
                 - edge_ngram
             max_gram:
               type: integer
+              format: int32
             min_gram:
               type: integer
+              format: int32
             side:
               $ref: '#/components/schemas/EdgeNGramSide'
             preserve_original:
@@ -668,6 +674,7 @@ components:
                 - fingerprint
             max_output_size:
               type: integer
+              format: int32
             separator:
               type: string
           required:
@@ -712,10 +719,13 @@ components:
               type: string
             max_subword_size:
               type: integer
+              format: int32
             min_subword_size:
               type: integer
+              format: int32
             min_word_size:
               type: integer
+              format: int32
             only_longest_match:
               type: boolean
             word_list:
@@ -808,8 +818,10 @@ components:
                 - length
             max:
               type: integer
+              format: int32
             min:
               type: integer
+              format: int32
           required:
             - type
     LimitTokenCountTokenFilter:
@@ -869,8 +881,10 @@ components:
                 - ngram
             max_gram:
               type: integer
+              format: int32
             min_gram:
               type: integer
+              format: int32
             preserve_original:
               $ref: '_common.yaml#/components/schemas/StringifiedBoolean'
           required:
@@ -1000,10 +1014,12 @@ components:
             max_shingle_size:
               oneOf:
                 - type: number
+                  format: double
                 - type: string
             min_shingle_size:
               oneOf:
                 - type: number
+                  format: double
                 - type: string
             output_unigrams:
               type: boolean
@@ -1157,6 +1173,7 @@ components:
                 - truncate
             length:
               type: integer
+              format: int32
           required:
             - type
     UniqueTokenFilter:
@@ -1280,6 +1297,7 @@ components:
                 - kuromoji_stemmer
             minimum_length:
               type: integer
+              format: int32
           required:
             - minimum_length
             - type
@@ -1456,6 +1474,7 @@ components:
                 $ref: '#/components/schemas/PhoneticLanguage'
             max_code_len:
               type: integer
+              format: int32
             name_type:
               $ref: '#/components/schemas/PhoneticNameType'
             replace:
@@ -1605,6 +1624,7 @@ components:
                 type: string
             max_token_length:
               type: integer
+              format: int32
           required:
             - tokenize_on_chars
             - type
@@ -1621,8 +1641,10 @@ components:
               type: string
             max_gram:
               type: integer
+              format: int32
             min_gram:
               type: integer
+              format: int32
             token_chars:
               type: array
               items:
@@ -1652,6 +1674,7 @@ components:
                 - keyword
             buffer_size:
               type: integer
+              format: int32
           required:
             - buffer_size
             - type
@@ -1690,8 +1713,10 @@ components:
               type: string
             max_gram:
               type: integer
+              format: int32
             min_gram:
               type: integer
+              format: int32
             token_chars:
               type: array
               items:
@@ -1758,6 +1783,7 @@ components:
                 - standard
             max_token_length:
               type: integer
+              format: int32
           required:
             - type
     UaxEmailUrlTokenizer:
@@ -1771,6 +1797,7 @@ components:
                 - uax_url_email
             max_token_length:
               type: integer
+              format: int32
           required:
             - type
     WhitespaceTokenizer:
@@ -1784,6 +1811,7 @@ components:
                 - whitespace
             max_token_length:
               type: integer
+              format: int32
           required:
             - type
     KuromojiTokenizer:
@@ -1801,6 +1829,7 @@ components:
               $ref: '#/components/schemas/KuromojiTokenizationMode'
             nbest_cost:
               type: integer
+              format: int32
             nbest_examples:
               type: string
             user_dictionary:
@@ -1827,6 +1856,7 @@ components:
               type: string
             group:
               type: integer
+              format: int32
             pattern:
               type: string
           required:

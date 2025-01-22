@@ -1219,6 +1219,7 @@ components:
                 type: string
               version:
                 type: integer
+                format: int32
               protocol:
                 type: string
                 enum:
@@ -1291,6 +1292,7 @@ components:
                 $ref: '../schemas/ml._common.yaml#/components/schemas/Query'
               size:
                 type: integer
+                format: int32
                 description: The number of connectors to return.
               sort:
                 type: array
@@ -1347,6 +1349,7 @@ components:
                 $ref: '../schemas/ml._common.yaml#/components/schemas/Query'
               size:
                 type: integer
+                format: int32
                 description: The number of agents to return.
               sort:
                 type: array

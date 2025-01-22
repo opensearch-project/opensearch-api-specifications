@@ -13,6 +13,7 @@ components:
           $ref: '_common.yaml#/components/schemas/Id'
         _primary_term:
           type: number
+          format: double
         _seq_no:
           $ref: '_common.yaml#/components/schemas/SequenceNumber'
         _version:
@@ -28,8 +29,10 @@ components:
           type: string
         last_updated_time:
           type: integer # TODO: field is strict_date_time||epoch_millis
+          format: int32
         schema_version:
           type: number
+          format: double
         error_notification:
           oneOf:
             - $ref: '#/components/schemas/ErrorNotification'
@@ -127,6 +130,7 @@ components:
       properties:
         count:
           type: integer
+          format: int32
         backoff:
           type: string
         delay:
@@ -144,6 +148,7 @@ components:
       properties:
         max_num_segments:
           type: integer
+          format: int32
     ActionReadOnly:
       type: object
     ActionReadWrite:
@@ -153,11 +158,13 @@ components:
       properties:
         number_of_replicas:
           type: number
+          format: double
     ActionIndexPriority:
       type: object
       properties:
         priority:
           type: number
+          format: double
     ActionClose:
       type: object
     ActionOpen:
@@ -176,12 +183,16 @@ components:
       properties:
         min_size:
           type: number
+          format: double
         min_index_age:
           type: number
+          format: double
         min_doc_count:
           type: number
+          format: double
         min_primary_shard_size:
           type: number
+          format: double
         copy_alias:
           type: boolean
     ActionNotification:
@@ -227,6 +238,7 @@ components:
       properties:
         total_policies:
           type: number
+          format: double
         policies:
           type: array
           items:
@@ -247,6 +259,7 @@ components:
       properties:
         updated_indices:
           type: number
+          format: double
         failures:
           type: boolean
         failed_indices:
@@ -305,6 +318,7 @@ components:
       properties:
         total_managed_indices:
           type: number
+          format: double
       additionalProperties:
         $ref: '#/components/schemas/ExplainPolicy'
     ExplainPolicy:
@@ -338,6 +352,7 @@ components:
           type: string
         last_update_time:
           type: integer
+          format: int32
       additionalProperties:
         anyOf:
           - $ref: '#/components/schemas/ErrorNotificationChime'
@@ -365,6 +380,7 @@ components:
           type: string
         port:
           type: integer
+          format: int32
         path:
           type: string
         query_params:
@@ -386,8 +402,10 @@ components:
             type: string
         priority:
           type: number
+          format: double
         last_updated_time:
           type: integer
+          format: int32
     RetryIndexRequest:
       type: object
       properties:

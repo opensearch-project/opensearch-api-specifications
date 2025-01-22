@@ -31,12 +31,15 @@ components:
           $ref: '#/components/schemas/Schedule'
         last_updated_time:
           type: number
+          format: double
         enabled_time:
           type: number
+          format: double
         description:
           type: string
         schema_version:
           type: number
+          format: double
         source_index:
           type: string
         target_index:
@@ -45,8 +48,10 @@ components:
           type: ['null', string]
         page_size:
           type: number
+          format: double
         delay:
           type: number
+          format: double
         continuous:
           type: boolean
         dimensions:
@@ -156,8 +161,10 @@ components:
       properties:
         start_time:
           type: number
+          format: double
         period:
           type: number
+          format: double
         unit:
           type: string
         cron:
@@ -168,3 +175,4 @@ components:
             - $ref: '#/components/schemas/Cron'
         schedule_delay:
           type: number
+          format: double

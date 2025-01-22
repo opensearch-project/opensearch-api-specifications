@@ -76,6 +76,7 @@ components:
             hits using the `from` and `size` parameters. To page through more than 10,000 hits, use the
             `search_after` parameter.
           type: number
+          format: double
         highlight:
           $ref: '_core.search.yaml#/components/schemas/Highlight'
         indices_boost:
@@ -85,11 +86,13 @@ components:
             type: object
             additionalProperties:
               type: number
+              format: double
         min_score:
           description: |-
             The minimum `_score` for document matching. Documents with a lower `_score` than the minimum
             are not included in the search results.
           type: number
+          format: double
         post_filter:
           $ref: '_common.query_dsl.yaml#/components/schemas/QueryContainer'
         profile:
@@ -113,6 +116,7 @@ components:
             than 10,000 hits using the `from` and `size` parameters. To page through more
             hits, use the `search_after` parameter.
           type: number
+          format: double
         sort:
           $ref: '_common.yaml#/components/schemas/Sort'
         _source:
@@ -130,6 +134,7 @@ components:
             limit, OpenSearch stops the query early. OpenSearch collects documents
             before sorting. Default is `0`, which does not terminate query execution early.
           type: number
+          format: double
         stats:
           description: |-
             The statistics groups to associate with the search. Each group maintains a statistics
@@ -172,11 +177,13 @@ components:
           properties:
             status:
               type: number
+              format: double
     MultiSearchResult:
       type: object
       properties:
         took:
           type: number
+          format: double
         responses:
           type: array
           items:

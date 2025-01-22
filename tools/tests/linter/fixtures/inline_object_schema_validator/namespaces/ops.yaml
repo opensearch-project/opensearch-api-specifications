@@ -60,6 +60,7 @@ components:
             type: integer
           bytes:
             type: number
+            format: double
   requestBodies:
     obj:
       content:

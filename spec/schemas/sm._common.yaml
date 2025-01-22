@@ -35,10 +35,13 @@ components:
           type: string
         _version:
           type: integer
+          format: int32
         _seq_no:
           type: integer
+          format: int32
         _primary_term:
           type: integer
+          format: int32
         sm_policy:
           $ref: '#/components/schemas/SMPolicy'
       required:
@@ -58,6 +61,7 @@ components:
           type: string
         schema_version:
           type: integer
+          format: int32
         creation:
           $ref: '#/components/schemas/CreationConfig'
         deletion:
@@ -74,8 +78,10 @@ components:
           type: boolean
         last_updated_time:
           type: integer
+          format: int32
         enabled_time:
           type: integer
+          format: int32
       required:
         - creation
         - description
@@ -87,6 +93,7 @@ components:
       properties:
         total_policies:
           type: integer
+          format: int32
         policies:
           type: array
           items:
@@ -102,8 +109,10 @@ components:
           type: string
         _seq_no:
           type: integer
+          format: int32
         _primary_term:
           type: integer
+          format: int32
         sm_policy:
           $ref: '#/components/schemas/SMPolicy'
       required:
@@ -140,8 +149,10 @@ components:
           type: string
         max_count:
           type: integer
+          format: int32
         min_count:
           type: integer
+          format: int32
       # Not all are mandatory according to the doc, min_count default 1
       # To align strictly with doc, remove required:
       # required:
@@ -207,8 +218,10 @@ components:
       properties:
         start_time:
           type: integer
+          format: int32
         period:
           type: integer
+          format: int32
         unit:
           type: string
           enum: [Days, Hours, Minutes]
@@ -266,8 +279,10 @@ components:
           $ref: '#/components/schemas/StateMetadata'
         policy_seq_no:
           type: integer
+          format: int32
         policy_primary_term:
           type: integer
+          format: int32
         enabled:
           type: boolean
 
@@ -288,6 +303,7 @@ components:
       properties:
         time:
           type: integer
+          format: int32
 
     ExecutionInfo:
       type: object
@@ -308,16 +324,20 @@ components:
       properties:
         count:
           type: integer
+          format: int32
 
     ShardsInfo:
       type: object
       properties:
         total:
           type: integer
+          format: int32
         successful:
           type: integer
+          format: int32
         failed:
           type: integer
+          format: int32
 
     DeletePolicyResponse:
       type: object
@@ -328,6 +348,7 @@ components:
           type: string
         _version:
           type: integer
+          format: int32
         result:
           type: string
         forced_refresh:
@@ -336,8 +357,10 @@ components:
           $ref: '#/components/schemas/ShardsInfo'
         _seq_no:
           type: integer
+          format: int32
         _primary_term:
           type: integer
+          format: int32
       required:
         - _id
         - _index
@@ -378,6 +401,7 @@ components:
           $ref: '#/components/schemas/NotFoundError'
         status:
           type: integer
+          format: int32
       required:
         - error
         - status
@@ -389,3 +413,4 @@ components:
           type: string
         status:
           type: integer
+          format: int32

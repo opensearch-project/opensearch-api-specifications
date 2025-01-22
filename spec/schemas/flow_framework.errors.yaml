@@ -14,6 +14,7 @@ components:
           # example: This API is disabled. To enable it, set [flow_framework.enabled] to true.
         status:
           type: integer
+          format: int32
     InvalidParameterError:
       type: object
       properties:
@@ -22,6 +23,7 @@ components:
           # example: Only the parameters [param1, param2] are permitted unless the provision parameter is set to true.
         status:
           type: integer
+          format: int32
     ConflictError:
       type: object
       properties:
@@ -30,6 +32,7 @@ components:
           # example: You cannot use both the 'provision_workflow' and 'update_workflow_fields' parameters in the same request.
         status:
           type: integer
+          format: int32
     MissingParameterError:
       type: object
       properties:
@@ -38,6 +41,7 @@ components:
           # example: You cannot use the 'reprovision_workflow' parameter to create a new template.
         status:
           type: integer
+          format: int32
     ParameterConflictError:
       type: object
       properties:
@@ -46,6 +50,7 @@ components:
           # example: You cannot use the 'reprovision_workflow' and 'use_case' parameters in the same request.
         status:
           type: integer
+          format: int32
     WorkFlowIdNullError:
       type: object
       properties:
@@ -54,6 +59,7 @@ components:
           # example: Workflow ID can not be null
         status:
           type: integer
+          format: int32
     DuplicateKeyError:
       type: object
       properties:
@@ -62,6 +68,7 @@ components:
           description: Error message when a duplicate key is found in the request.
         status:
           type: integer
+          format: int32
           description: HTTP status code for the error.
           # example: 400
     InvalidRequestBodyFieldError:
@@ -72,6 +79,7 @@ components:
           description: Error message when a request body field is not a string.
         status:
           type: integer
+          format: int32
           description: HTTP status code for the error.
     RequestBodyParsingFailedError:
       type: object
@@ -81,6 +89,7 @@ components:
           description: Error message when request body parsing fails.
         status:
           type: integer
+          format: int32
           description: HTTP status code for the error.
           # example: 400
     WorkflowSaveError:
@@ -91,6 +100,7 @@ components:
           # example: Failed to save workflow state
         status:
           type: integer
+          format: int32
     MaxWorkflowsLimitError:
       type: object
       properties:
@@ -99,6 +109,7 @@ components:
           # example: Maximum workflows limit reached 50
         code:
           type: integer
+          format: int32
     TemplateNameRequiredError:
       type: object
       properties:
@@ -113,6 +124,7 @@ components:
           # example: Failed to retrieve template (12345) from global context.
         code:
           type: integer
+          format: int32
     InvalidTemplateVersionError:
       type: object
       properties:
@@ -142,6 +154,7 @@ components:
           # example: Failed to retrieve workflow step json.
         code:
           type: integer
+          format: int32
     DeprovisioningError:
       type: object
       properties:
@@ -168,6 +181,7 @@ components:
           description: Error message when the request times out.
         status:
           type: integer
+          format: int32
           description: HTTP status code for the error.
           # example: 408
     BadRequestError:
@@ -179,5 +193,6 @@ components:
           # example: Invalid request body or query parameters.
         status:
           type: integer
+          format: int32
           description: HTTP status code for the error.
           # example: 400

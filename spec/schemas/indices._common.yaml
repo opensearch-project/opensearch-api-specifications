@@ -118,6 +118,7 @@ components:
           oneOf:
             - type: string
             - type: number
+              format: double
         max_slices_per_scroll:
           $ref: '_common.yaml#/components/schemas/StringifiedInteger'
         translog:
@@ -133,6 +134,7 @@ components:
         priority:
           oneOf:
             - type: number
+              format: double
             - type: string
         top_metrics_max_size:
           $ref: '_common.yaml#/components/schemas/StringifiedInteger'
@@ -910,6 +912,7 @@ components:
           format: double
         min_segment_size:
           type: integer
+          format: int32
       required:
         - max
         - min
@@ -1177,6 +1180,7 @@ components:
           $ref: '#/components/schemas/IndexErrorCause'
         status:
           type: number
+          format: double
     IndexErrorCause:
       type: object
       properties:

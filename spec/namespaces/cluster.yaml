@@ -1137,6 +1137,7 @@ components:
         oneOf:
           - type: string
           - type: number
+            format: double
       style: form
     cluster.health::query.wait_for_status:
       in: query

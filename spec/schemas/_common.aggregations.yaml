@@ -81,6 +81,7 @@ components:
           properties:
             value:
               type: number
+              format: double
           required:
             - value
     AggregateBase:
@@ -192,6 +193,7 @@ components:
           properties:
             normalized_value:
               type: number
+              format: double
             normalized_value_as_string:
               type: string
     BucketMetricValueAggregate:
@@ -212,6 +214,7 @@ components:
           properties:
             count:
               type: number
+              format: double
             min:
               type: ['null', number, string]
             max:
@@ -220,6 +223,7 @@ components:
               type: ['null', number, string]
             sum:
               type: number
+              format: double
             min_as_string:
               type: string
             max_as_string:
@@ -341,6 +345,7 @@ components:
           properties:
             count:
               type: number
+              format: double
             location:
               $ref: '_common.yaml#/components/schemas/GeoLocation'
           required:
@@ -378,6 +383,7 @@ components:
               type: string
             key:
               type: number
+              format: double
           required:
             - key
     MultiBucketBase:
@@ -385,6 +391,7 @@ components:
       properties:
         doc_count:
           type: number
+          format: double
       required:
         - doc_count
     DateHistogramAggregate:
@@ -462,10 +469,13 @@ components:
           properties:
             min:
               type: number
+              format: double
             key:
               type: number
+              format: double
             max:
               type: number
+              format: double
             min_as_string:
               type: string
             key_as_string:
@@ -487,8 +497,10 @@ components:
           properties:
             doc_count_error_upper_bound:
               type: number
+              format: double
             sum_other_doc_count:
               type: number
+              format: double
     MultiBucketAggregateBaseStringTermsBucket:
       allOf:
         - $ref: '#/components/schemas/AggregateBase'
@@ -525,6 +537,7 @@ components:
           properties:
             doc_count_error:
               type: number
+              format: double
     LongTermsAggregate:
       allOf:
         - $ref: '#/components/schemas/TermsAggregateBaseLongTermsBucket'
@@ -536,8 +549,10 @@ components:
           properties:
             doc_count_error_upper_bound:
               type: number
+              format: double
             sum_other_doc_count:
               type: number
+              format: double
     MultiBucketAggregateBaseLongTermsBucket:
       allOf:
         - $ref: '#/components/schemas/AggregateBase'
@@ -565,6 +580,7 @@ components:
           properties:
             key:
               type: number
+              format: double
             key_as_string:
               type: string
           required:
@@ -580,8 +596,10 @@ components:
           properties:
             doc_count_error_upper_bound:
               type: number
+              format: double
             sum_other_doc_count:
               type: number
+              format: double
     MultiBucketAggregateBaseDoubleTermsBucket:
       allOf:
         - $ref: '#/components/schemas/AggregateBase'
@@ -609,6 +627,7 @@ components:
           properties:
             key:
               type: number
+              format: double
             key_as_string:
               type: string
           required:
@@ -624,8 +643,10 @@ components:
           properties:
             doc_count_error_upper_bound:
               type: number
+              format: double
             sum_other_doc_count:
               type: number
+              format: double
     MultiBucketAggregateBaseVoid:
       allOf:
         - $ref: '#/components/schemas/AggregateBase'
@@ -677,6 +698,7 @@ components:
           properties:
             key:
               type: number
+              format: double
             key_as_string:
               type: string
           required:
@@ -729,8 +751,10 @@ components:
           properties:
             doc_count_error_upper_bound:
               type: number
+              format: double
             sum_other_doc_count:
               type: number
+              format: double
     MultiBucketAggregateBaseMultiTermsBucket:
       allOf:
         - $ref: '#/components/schemas/AggregateBase'
@@ -764,6 +788,7 @@ components:
               type: string
             doc_count_error_upper_bound:
               type: number
+              format: double
           required:
             - key
     MissingAggregate:
@@ -777,6 +802,7 @@ components:
           properties:
             doc_count:
               type: number
+              format: double
           required:
             - doc_count
     NestedAggregate:
@@ -786,6 +812,7 @@ components:
           properties:
             doc_count:
               type: number
+              format: double
     ReverseNestedAggregate:
       allOf:
         - $ref: '#/components/schemas/SingleBucketAggregateBase'
@@ -911,8 +938,10 @@ components:
           properties:
             from:
               type: number
+              format: double
             to:
               type: number
+              format: double
             from_as_string:
               type: string
             to_as_string:
@@ -1035,8 +1064,10 @@ components:
           properties:
             bg_count:
               type: number
+              format: double
             doc_count:
               type: number
+              format: double
     MultiBucketAggregateBaseSignificantLongTermsBucket:
       allOf:
         - $ref: '#/components/schemas/AggregateBase'
@@ -1064,6 +1095,7 @@ components:
           properties:
             key:
               type: number
+              format: double
             key_as_string:
               type: string
           required:
@@ -1075,8 +1107,10 @@ components:
           properties:
             score:
               type: number
+              format: double
             bg_count:
               type: number
+              format: double
           required:
             - bg_count
             - score
@@ -1091,8 +1125,10 @@ components:
           properties:
             bg_count:
               type: number
+              format: double
             doc_count:
               type: number
+              format: double
     MultiBucketAggregateBaseSignificantStringTermsBucket:
       allOf:
         - $ref: '#/components/schemas/AggregateBase'
@@ -1133,8 +1169,10 @@ components:
           properties:
             bg_count:
               type: number
+              format: double
             doc_count:
               type: number
+              format: double
     CompositeAggregate:
       allOf:
         - $ref: '#/components/schemas/MultiBucketAggregateBaseCompositeBucket'
@@ -1217,6 +1255,7 @@ components:
           type: string
         importance:
           type: number
+          format: double
         classes:
           type: array
           items:
@@ -1230,6 +1269,7 @@ components:
           type: string
         importance:
           type: number
+          format: double
       required:
         - class_name
         - importance
@@ -1240,8 +1280,10 @@ components:
           $ref: '_common.yaml#/components/schemas/FieldValue'
         class_probability:
           type: number
+          format: double
         class_score:
           type: number
+          format: double
       required:
         - class_name
         - class_probability
@@ -1253,6 +1295,7 @@ components:
           properties:
             count:
               type: number
+              format: double
             min_length:
               type: ['null', number, string]
             max_length:
@@ -1267,6 +1310,7 @@ components:
                 - type: object
                   additionalProperties:
                     type: number
+                    format: double
                 - type: string
             min_length_as_string:
               type: string
@@ -1287,18 +1331,25 @@ components:
           properties:
             min:
               type: number
+              format: double
             max:
               type: number
+              format: double
             q1:
               type: number
+              format: double
             q2:
               type: number
+              format: double
             q3:
               type: number
+              format: double
             lower:
               type: number
+              format: double
             upper:
               type: number
+              format: double
             min_as_string:
               type: string
             max_as_string:
@@ -1364,6 +1415,7 @@ components:
           properties:
             value:
               type: number
+              format: double
             value_as_string:
               type: string
           required:
@@ -1375,6 +1427,7 @@ components:
           properties:
             value:
               type: number
+              format: double
             value_as_string:
               type: string
           required:
@@ -1386,6 +1439,7 @@ components:
           properties:
             doc_count:
               type: number
+              format: double
             fields:
               type: array
               items:
@@ -1399,22 +1453,29 @@ components:
           $ref: '_common.yaml#/components/schemas/Field'
         count:
           type: number
+          format: double
         mean:
           type: number
+          format: double
         variance:
           type: number
+          format: double
         skewness:
           type: number
+          format: double
         kurtosis:
           type: number
+          format: double
         covariance:
           type: object
           additionalProperties:
             type: number
+            format: double
         correlation:
           type: object
           additionalProperties:
             type: number
+            format: double
       required:
         - correlation
         - count
@@ -2357,9 +2418,11 @@ components:
         max:
           description: Maximum value for the bound.
           type: number
+          format: double
         min:
           description: Minimum value for the bound.
           type: number
+          format: double
       required:
         - max
         - min

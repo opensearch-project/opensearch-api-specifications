@@ -42,7 +42,8 @@ components:
       name: docket
       in: path
       schema:
-        type: number2
+        type: number
+        format: double
   responses:
     adopt@200:
       content:
