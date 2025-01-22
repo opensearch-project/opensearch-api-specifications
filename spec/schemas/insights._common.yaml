@@ -21,7 +21,7 @@ components:
       properties:
         timestamp:
           type: integer
-          format: int32
+          format: int64
           description: The timestamp of the query execution.
         total_shards:
           type: integer
