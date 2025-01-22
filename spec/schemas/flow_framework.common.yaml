@@ -120,10 +120,10 @@ components:
           $ref: '#/components/schemas/user'
         created_time:
           type: integer
-          format: int32
+          format: int64
         last_updated_time:
           type: integer
-          format: int32
+          format: int64
         last_provisioned_time:
           type: number
           format: double
@@ -390,7 +390,7 @@ components:
       properties:
         took:
           type: integer
-          format: int32
+          format: int64
           description: Time in milliseconds that the request took to complete.
         timed_out:
           type: boolean

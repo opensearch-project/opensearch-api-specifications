@@ -78,10 +78,10 @@ components:
           type: boolean
         last_updated_time:
           type: integer
-          format: int32
+          format: int64
         enabled_time:
           type: integer
-          format: int32
+          format: int64
       required:
         - creation
         - description
@@ -218,7 +218,7 @@ components:
       properties:
         start_time:
           type: integer
-          format: int32
+          format: int64
         period:
           type: integer
           format: int32

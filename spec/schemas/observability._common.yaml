@@ -34,10 +34,10 @@ components:
           type: string
         lastUpdatedTimeMs:
           type: integer
-          format: int32
+          format: int64
         createdTimeMs:
           type: integer
-          format: int32
+          format: int64
         tenant:
           type: string
         operationalPanel:
