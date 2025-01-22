@@ -29,7 +29,7 @@ components:
           type: string
         last_updated_time:
           type: integer # TODO: field is strict_date_time||epoch_millis
-          format: int32
+          format: int64
         schema_version:
           type: number
           format: double
@@ -405,7 +405,7 @@ components:
           format: double
         last_updated_time:
           type: integer
-          format: int32
+          format: int64
     RetryIndexRequest:
       type: object
       properties:

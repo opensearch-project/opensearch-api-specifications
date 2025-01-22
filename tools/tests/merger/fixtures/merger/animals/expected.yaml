@@ -72,7 +72,6 @@ components:
       in: path
       schema:
         type: number
-        format: double
     indices.create___path.index:
       name: index
       in: path
