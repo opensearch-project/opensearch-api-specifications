@@ -23,6 +23,7 @@ components:
           $ref: '_common.yaml#/components/schemas/Id'
         _primary_term:
           type: number
+          format: double
         _routing:
           type: string
         _seq_no:

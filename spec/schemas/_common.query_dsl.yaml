@@ -1405,6 +1405,7 @@ components:
               type: string
             k:
               type: integer
+              format: int32
             min_score:
               type: number
               format: float
@@ -1646,15 +1647,19 @@ components:
             gt:
               description: Greater than.
               type: number
+              format: double
             gte:
               description: Greater than or equal to.
               type: number
+              format: double
             lt:
               description: Less than.
               type: number
+              format: double
             lte:
               description: Less than or equal to.
               type: number
+              format: double
             from:
               type: ['null', number, string]
             to:

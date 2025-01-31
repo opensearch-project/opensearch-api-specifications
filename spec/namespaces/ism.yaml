@@ -394,6 +394,7 @@ components:
       description: Only perform the operation if the document has this primary term.
       schema:
         type: number
+        format: double
       style: form
     ism.add_policy::query.index:
       name: index
@@ -504,6 +505,7 @@ components:
       description: Only perform the operation if the document has this primary term.
       schema:
         type: number
+        format: double
       style: form
     ism.put_policies::query.if_seq_no:
       name: if_seq_no

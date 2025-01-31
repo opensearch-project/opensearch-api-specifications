@@ -15,6 +15,7 @@ components:
           type: object
         fetch_size:
           type: integer
+          format: int32
     QueryResponse:
       type: object
       properties:
@@ -30,10 +31,13 @@ components:
           type: string
         total:
           type: integer
+          format: int32
         size:
           type: integer
+          format: int32
         status:
           type: integer
+          format: int32
     Explain:
       type: object
       properties:
@@ -43,6 +47,7 @@ components:
           type: object
         fetch_size:
           type: integer
+          format: int32
     ExplainResponse:
       type: object
       properties:
@@ -135,6 +140,7 @@ components:
           anyOf:
             - type: string
             - type: integer
+              format: int32
     Sql:
       type: object
       properties:
@@ -145,6 +151,7 @@ components:
         slowlog:
           anyOf:
             - type: integer
+              format: int32
             - type: string
         cursor:
           $ref: '#/components/schemas/Cursor'
@@ -162,9 +169,11 @@ components:
           type: boolean
         plugins.sql.slowlog:
           type: integer
+          format: int32
         plugins.sql.cursor.keep_alive:
           type: string
         plugins.query.memory_limit:
           type: string
         plugins.query.size_limit:
           type: integer
+          format: int32

@@ -238,6 +238,7 @@ components:
       required: false
       schema:
         type: number
+        format: double
       style: form
     transforms.search::query.size:
       name: size
@@ -246,6 +247,7 @@ components:
       required: false
       schema:
         type: number
+        format: double
       style: form
     transforms.search::query.from:
       name: from
@@ -254,6 +256,7 @@ components:
       required: false
       schema:
         type: number
+        format: double
       style: form
     transforms.search::query.search:
       name: search

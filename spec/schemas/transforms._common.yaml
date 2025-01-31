@@ -31,6 +31,7 @@ components:
       properties:
         total_transforms:
           type: number
+          format: double
         transforms:
           type: array
           items:
@@ -76,6 +77,7 @@ components:
           $ref: '_common.yaml#/components/schemas/SequenceNumber'
         status:
           type: number
+          format: double
       required:
         - _id
         - _index
@@ -93,6 +95,7 @@ components:
           type: string
         schema_version:
           type: number
+          format: double
         continuous:
           type: boolean
         schedule:
@@ -101,6 +104,7 @@ components:
           type: ['null', string]
         updated_at:
           type: number
+          format: double
         enabled:
           type: boolean
         enabled_at:
@@ -119,6 +123,7 @@ components:
             type: string
         page_size:
           type: number
+          format: double
         groups:
           type: array
           items:
@@ -159,8 +164,10 @@ components:
       properties:
         start_time:
           type: number
+          format: double
         period:
           type: number
+          format: double
         unit:
           type: string
     GroupsConfigItem:
@@ -208,23 +215,30 @@ components:
       properties:
         last_timestamp:
           type: number
+          format: double
         documents_behind:
           type: object
           additionalProperties:
             type: number
+            format: double
     ExplainStats:
       type: object
       properties:
         pages_processed:
           type: number
+          format: double
         documents_processed:
           type: number
+          format: double
         documents_indexed:
           type: number
+          format: double
         index_time_in_millis:
           type: number
+          format: double
         search_time_in_millis:
           type: number
+          format: double
     TransformMetadata:
       type: object
       properties:
@@ -234,6 +248,7 @@ components:
           type: string
         last_updated_at:
           type: number
+          format: double
         status:
           type: string
         failure_reason:

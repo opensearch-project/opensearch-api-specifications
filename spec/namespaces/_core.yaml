@@ -3191,6 +3191,7 @@ components:
               result:
                 oneOf:
                   - type: number
+                    format: double
                   - type: string
                   - type: boolean
             required:
@@ -3286,6 +3287,7 @@ components:
                 type: boolean
               status:
                 type: number
+                format: double
             required:
               - _shards
               - hits

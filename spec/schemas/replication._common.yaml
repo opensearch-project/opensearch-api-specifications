@@ -48,8 +48,10 @@ components:
       properties:
         leader_checkpoint:
           type: integer
+          format: int32
         follower_checkpoint:
           type: integer
+          format: int32
         seq_no:
           $ref: '_common.yaml#/components/schemas/SequenceNumber'
     LeaderStatus:
@@ -57,14 +59,18 @@ components:
       properties:
         num_replicated_indices:
           type: number
+          format: double
         operations_read:
           type: number
+          format: double
         translog_size_bytes:
           $ref: '_common.yaml#/components/schemas/ByteCount'
         operations_read_lucene:
           type: number
+          format: double
         operations_read_translog:
           type: number
+          format: double
         total_read_time_lucene_millis:
           $ref: '_common.yaml#/components/schemas/StringifiedEpochTimeUnitMillis'
         total_read_time_translog_millis:
@@ -80,12 +86,15 @@ components:
       properties:
         operations_read:
           type: number
+          format: double
         translog_size_bytes:
           $ref: '_common.yaml#/components/schemas/ByteCount'
         operations_read_lucene:
           type: number
+          format: double
         operations_read_translog:
           type: number
+          format: double
         total_read_time_lucene_millis:
           $ref: '_common.yaml#/components/schemas/StringifiedEpochTimeUnitMillis'
         total_read_time_translog_millis:
@@ -97,32 +106,46 @@ components:
       properties:
         num_syncing_indices:
           type: number
+          format: double
         num_bootstrapping_indices:
           type: number
+          format: double
         num_paused_indices:
           type: number
+          format: double
         num_failed_indices:
           type: number
+          format: double
         num_shard_tasks:
           type: number
+          format: double
         num_index_tasks:
           type: number
+          format: double
         operations_written:
           type: number
+          format: double
         operations_read:
           type: number
+          format: double
         failed_read_requests:
           type: number
+          format: double
         throttled_read_requests:
           type: number
+          format: double
         failed_write_requests:
           type: number
+          format: double
         throttled_write_requests:
           type: number
+          format: double
         follower_checkpoint:
           type: number
+          format: double
         leader_checkpoint:
           type: number
+          format: double
         total_write_time_millis:
           $ref: '_common.yaml#/components/schemas/StringifiedEpochTimeUnitMillis'
         index_stats:
@@ -134,20 +157,28 @@ components:
       properties:
         operations_written:
           type: number
+          format: double
         operations_read:
           type: number
+          format: double
         failed_read_requests:
           type: number
+          format: double
         throttled_read_requests:
           type: number
+          format: double
         failed_write_requests:
           type: number
+          format: double
         throttled_write_requests:
           type: number
+          format: double
         follower_checkpoint:
           type: number
+          format: double
         leader_checkpoint:
           type: number
+          format: double
         total_write_time_millis:
           $ref: '_common.yaml#/components/schemas/StringifiedEpochTimeUnitMillis'
     AutoFollowStatus:
@@ -155,10 +186,13 @@ components:
       properties:
         num_success_start_replication:
           type: number
+          format: double
         num_failed_start_replication:
           type: number
+          format: double
         num_failed_leader_calls:
           type: number
+          format: double
         failed_indices:
           type: array
           items:
@@ -176,16 +210,20 @@ components:
           type: string
         num_success_start_replication:
           type: number
+          format: double
         num_failed_start_replication:
           type: number
+          format: double
         num_failed_leader_calls:
           type: number
+          format: double
         failed_indices:
           type: array
           items:
             type: string
         last_execution_time:
           type: number
+          format: double
     SettingsBody:
       type: object
       properties:
@@ -200,16 +238,20 @@ components:
               properties:
                 index.number_of_shards:
                   type: integer
+                  format: int32
                 index.number_of_replicas:
                   type: integer
+                  format: int32
             - $ref: '#/components/schemas/SettingsBody'
     IndexSchema:
       type: object
       properties:
         number_of_shards:
           type: integer
+          format: int32
         number_of_replicas:
           type: integer
+          format: int32
     CreateReplicationRule:
       type: object
       properties:

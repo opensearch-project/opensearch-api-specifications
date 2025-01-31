@@ -249,6 +249,7 @@ components:
             $ref: '#/components/schemas/Property'
         ignore_above:
           type: integer
+          format: int32
         dynamic:
           $ref: '#/components/schemas/DynamicMapping'
         fields:
@@ -287,8 +288,10 @@ components:
       properties:
         max_chars:
           type: integer
+          format: int32
         min_chars:
           type: integer
+          format: int32
       required:
         - max_chars
         - min_chars
@@ -422,6 +425,7 @@ components:
               $ref: '#/components/schemas/IndexOptions'
             max_shingle_size:
               type: integer
+              format: int32
             norms:
               type: boolean
             search_analyzer:
@@ -464,6 +468,7 @@ components:
               type: boolean
             position_increment_gap:
               type: integer
+              format: int32
             search_analyzer:
               type: string
             search_quote_analyzer:
@@ -518,6 +523,7 @@ components:
               $ref: '_common.yaml#/components/schemas/DateTime'
             precision_step:
               type: integer
+              format: int32
             type:
               type: string
               enum:
@@ -544,6 +550,7 @@ components:
               $ref: '_common.yaml#/components/schemas/DateTime'
             precision_step:
               type: integer
+              format: int32
             locale:
               type: string
             type:
@@ -627,6 +634,7 @@ components:
                 $ref: '#/components/schemas/SuggestContext'
             max_input_length:
               type: integer
+              format: int32
             preserve_position_increments:
               type: boolean
             preserve_separators:
@@ -651,6 +659,7 @@ components:
         precision:
           oneOf:
             - type: number
+              format: double
             - type: string
       required:
         - name
@@ -931,6 +940,7 @@ components:
                 - integer
             null_value:
               type: integer
+              format: int32
           required:
             - type
     LongNumberProperty:
@@ -1095,6 +1105,7 @@ components:
                 - knn_vector
             dimension:
               type: integer
+              format: int32
             space_type:
               type: string
             data_type:

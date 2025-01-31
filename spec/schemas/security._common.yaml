@@ -183,12 +183,15 @@ components:
       properties:
         total:
           type: number
+          format: double
           description: Total number of nodes.
         successful:
           type: number
+          format: double
           description: Number of nodes for which certificates could be fetched.
         failed:
           type: number
+          format: double
           description: Number of nodes for which certificates could not be fetched.
 
     CertificatesDetail:

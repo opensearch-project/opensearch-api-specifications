@@ -87,6 +87,7 @@ components:
           description: The unique identifier of the deleted document.
         _version:
           type: integer
+          format: int32
           description: The version of the document after the deletion.
         result:
           type: string
@@ -96,9 +97,11 @@ components:
           $ref: '#/components/schemas/shards'
         _seq_no:
           type: integer
+          format: int32
           description: The sequence number assigned to the document after the deletion.
         _primary_term:
           type: integer
+          format: int32
           description: The primary term assigned to the document after the deletion.
     FlowFrameworkGetResponse:
       type: object
@@ -117,10 +120,13 @@ components:
           $ref: '#/components/schemas/user'
         created_time:
           type: integer
+          format: int64
         last_updated_time:
           type: integer
+          format: int64
         last_provisioned_time:
           type: number
+          format: double
     version:
       type: object
       description: A key-value map with two fields, template, which identifies the template version, and compatibility, which identifies a list of minimum required OpenSearch versions.
@@ -138,15 +144,19 @@ components:
       properties:
         total:
           type: integer
+          format: int32
           description: The total number of shards involved in the deletion.
         successful:
           type: integer
+          format: int32
           description: The number of shards where the deletion was successful.
         failed:
           type: integer
+          format: int32
           description: The number of shards where the deletion failed.
         skipped:
           type: integer
+          format: int32
           description: The number of shards where the deletion was skipped.
     query:
       type: object
@@ -161,6 +171,7 @@ components:
       properties:
         value:
           type: integer
+          format: int32
           description: Total number of matching documents.
         relation:
           type: string
@@ -176,12 +187,15 @@ components:
           description: The document ID.
         _version:
           type: integer
+          format: int32
           description: The version of the document.
         _seq_no:
           type: integer
+          format: int32
           description: The sequence number of the document.
         _primary_term:
           type: integer
+          format: int32
           description: The primary term of the document.
         _score:
           type: number
@@ -200,12 +214,15 @@ components:
           description: The document ID.
         _version:
           type: integer
+          format: int32
           description: The version of the document.
         _seq_no:
           type: integer
+          format: int32
           description: The sequence number of the document.
         _primary_term:
           type: integer
+          format: int32
           description: The primary term of the document.
         _score:
           type: number
@@ -373,6 +390,7 @@ components:
       properties:
         took:
           type: integer
+          format: int64
           description: Time in milliseconds that the request took to complete.
         timed_out:
           type: boolean
@@ -386,6 +404,7 @@ components:
       properties:
         took:
           type: integer
+          format: int32
           description: Time in milliseconds that the request took to complete.
         timed_out:
           type: boolean

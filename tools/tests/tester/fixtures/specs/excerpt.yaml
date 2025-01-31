@@ -249,6 +249,7 @@ components:
   schemas:
     _common:uint:
       type: number
+      format: double
     _common:ShardStatistics:
       type: object
       properties:
